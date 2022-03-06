@@ -8,6 +8,7 @@ def get_currency(in_currency, out_currency):
   soup = BeautifulSoup(content, 'html.parser')
   rate = soup.find("span", class_="ccOutputRslt").get_text()
   rate = float(rate[:-4])
+  print(rate)
 
   return rate
 
